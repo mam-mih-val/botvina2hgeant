@@ -31,11 +31,36 @@ int main(int n_args, char** args){
     chain->GetEntry(i);
     auto evt_id =  event->GetEventNr();
     auto b = event->GetB();
-    auto n_part = event->GetNpa();
     auto Ebeam = 1.23;
+    auto n_particles = event->GetNpa();
+    int n_part=0;
+    for( int j=0; j<n_particles; ++j ) {
+      auto particle = event->GetParticle(j);
+      auto pid =
+          TDatabasePDG::Instance()->ConvertPdgToGeant3(particle->GetPdg());
+      if (pid == 0) {
+        auto pdg = particle->GetPdg();
+        switch (pdg) {
+        case 100'001'002'0:
+          pid = 45;
+          break;
+        case 100'001'003'0:
+          pid = 46;
+          break;
+        case 100'002'003'0:
+          pid = 49;
+          break;
+        case 100'002'004'0:
+          pid = 47;
+          break;
+        default:
+          continue;
+        }
+      }
+      n_part++;
+    }
     std::string line = std::to_string( evt_id )+"\t"+std::to_string( n_part )+"\t"+std::to_string( Ebeam )+"\t"+std::to_string( b )+"\t0";
     file_out << line << std::endl;
-    auto n_particles = event->GetNpa();
     for( int j=0; j<n_particles; ++j ){
       auto particle = event->GetParticle(j);
       auto E = particle->E();
