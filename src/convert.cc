@@ -31,7 +31,7 @@ int main(int n_args, char** args){
     chain->GetEntry(i);
     auto evt_id =  event->GetEventNr();
     auto b = event->GetB();
-    auto n_part = initial_state->getNPart();
+    auto n_part = event->GetNpa();
     auto Ebeam = 1.23;
     std::string line = std::to_string( evt_id )+"\t"+std::to_string( n_part )+"\t"+std::to_string( Ebeam )+"\t"+std::to_string( b )+"\t0";
     file_out << line << std::endl;
