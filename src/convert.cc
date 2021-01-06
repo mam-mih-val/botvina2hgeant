@@ -5,6 +5,8 @@
 #include <EventInitialState.h>
 #include <TChain.h>
 #include <TDatabasePDG.h>
+#include <TFile.h>
+#include <TH1F.h>
 #include <UEvent.h>
 #include <UParticle.h>
 #include <fstream>
@@ -27,6 +29,8 @@ int main(int n_args, char** args){
   chain->SetBranchAddress("iniState", &initial_state);
   std::ofstream file_out{out_file_name};
   auto n_events = chain->GetEntries();
+  auto qa_file = TFile::Open( "qa.root" );
+  auto phi_distribution_ = new TH1F("phi", "", 100, -4.0, 4.0);
   for( int i=0; i<n_events; ++i ){
     chain->GetEntry(i);
     auto evt_id =  event->GetEventNr();
@@ -61,11 +65,14 @@ int main(int n_args, char** args){
     }
     std::string line = std::to_string( evt_id )+"\t"+std::to_string( n_part )+"\t"+std::to_string( Ebeam )+"\t"+std::to_string( b )+"\t0";
     file_out << line << std::endl;
+    auto rp = event->GetPhi();
     for( int j=0; j<n_particles; ++j ){
       auto particle = event->GetParticle(j);
       auto E = particle->E();
-      auto px = particle->Px();
-      auto py = particle->Py();
+      auto phi = particle->GetMomentum().Phi();
+      auto pt = particle->GetMomentum().Pt();
+      auto px = pt*cos(phi-rp);
+      auto py = pt*sin(phi-rp);
       auto pz = particle->Pz();
       auto pid = TDatabasePDG::Instance()->ConvertPdgToGeant3(particle->GetPdg());
       if( pid == 0 ){
