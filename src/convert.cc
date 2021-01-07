@@ -29,8 +29,6 @@ int main(int n_args, char** args){
   chain->SetBranchAddress("iniState", &initial_state);
   std::ofstream file_out{out_file_name};
   auto n_events = chain->GetEntries();
-  auto qa_file = TFile::Open( "qa.root" );
-  auto phi_distribution_ = new TH1F("phi", "", 100, -4.0, 4.0);
   for( int i=0; i<n_events; ++i ){
     chain->GetEntry(i);
     auto evt_id =  event->GetEventNr();
