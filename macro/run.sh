@@ -11,7 +11,9 @@ time=8:00:00
 build_dir=/lustre/nyx/hades/user/mmamaev/botvina2hgeant/build
 
 lists_dir=${output_dir}/lists
+mkdir -p $lists_dir
 log_dir=${output_dir}/log
+mkdir -p $log_dir
 
 split -l 10 -d -a 3 --additional-suffix=.list "$file_list" $lists_dir
 
