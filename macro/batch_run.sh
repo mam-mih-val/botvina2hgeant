@@ -6,7 +6,7 @@ date $format
 
 job_num=$(($SLURM_ARRAY_TASK_ID))
 
-filelist=$(sed '${job_num}q;d' `ls $lists_dir`)
+filelist=$(ls $lists_dir | sed "${job_num}q;d")
 
 cd $output_dir
 mkdir -p $job_num
@@ -17,7 +17,7 @@ source $hadesroot
 
 $build_dir/convert $filelist input.evt
 
-cp $build_dir/../macro/make_config/template_config.dat config.dat
+cp $build_dir/../macro/template_config.dat config.dat
 echo $(pwd)/input.evt >> config.dat
 echo $(pwd)/geant_out.root >> config.dat
 
