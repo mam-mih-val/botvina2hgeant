@@ -15,8 +15,8 @@ cd $job_num
 echo "loading " $hadesroot
 source $hadesroot
 
-echo executing $build_dir/convert $filelist input.evt
-$build_dir/convert $filelist input.evt
+echo executing $build_dir/convert $lists_dir/$filelist input.evt
+$build_dir/convert $lists_dir/$filelist input.evt
 
 cp $build_dir/../macro/template_config.dat config.dat
 echo $(pwd)/input.evt >> config.dat
