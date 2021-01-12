@@ -88,9 +88,7 @@ int main(int n_args, char** args){
         }
         default:
           int charge = (int)(pdg / 1E+4) % (int)1e+3;
-          if (charge == 0)
-            continue;
-          while (pid == 0)
+          while (pid == 0 && charge > 0)
             try {
               pid = geant_numbers.at(charge);
             } catch (std::out_of_range &) {
@@ -99,6 +97,8 @@ int main(int n_args, char** args){
             }
         }
       }
+      if (pid == 0)
+        continue;
       n_part++;
     }
     std::string line = std::to_string( evt_id )+"\t"+std::to_string( n_part )+"\t"+std::to_string( Ebeam )+"\t"+std::to_string( b )+"\t0";
@@ -159,14 +159,14 @@ int main(int n_args, char** args){
           }
           default:
             int charge = (int) ( pdg / 1E+4) % (int) 1e+3;
-            if(charge==0)
-              continue;
-          while ( pid==0 )
+          while ( pid==0 && charge > 0 )
             try {
               pid = geant_numbers.at(charge);
             } catch (std::out_of_range&) { pid = 0; charge--; }
         }
       }
+      if (pid == 0)
+        continue;
       line = std::to_string( E )+"\t"+std::to_string( px )+"\t"+std::to_string( py )+"\t"+std::to_string( pz )+"\t"+std::to_string( pid );
       file_out << line << std::endl;
     }
