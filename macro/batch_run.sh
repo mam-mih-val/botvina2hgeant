@@ -26,7 +26,7 @@ echo $(pwd)/geant_out.root >> config.dat
 
 mkdir dst
 
-/lustre/hebe/hades/user/fkornas/sub/apr12/OwnEvt/dst/analysisDST geant_out*.root dst/ 10000
+/lustre/hebe/hades/user/fkornas/sub/apr12/OwnEvt/dst/analysisDST geant_out*.root dst/ 50000
 
 echo JOB FINISHED!
 date $format
