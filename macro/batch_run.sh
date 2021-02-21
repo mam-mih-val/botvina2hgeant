@@ -26,7 +26,13 @@ source $hadesroot
 #
 #mkdir dst
 
-/lustre/hebe/hades/user/fkornas/sub/apr12/OwnEvt/dst/analysisDST geant_out*.root `pwd`/dst/ 50000 1
+ls geant_out*.root > geant_out.list
+
+while read line; do
+    input_files=$input_files","$line
+done < geant_out.list
+
+/lustre/hebe/hades/user/fkornas/sub/apr12/OwnEvt/dst/analysisDST $input_files `pwd`/dst/ 50000 1
 
 echo JOB FINISHED!
 date $format
