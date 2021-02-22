@@ -18,11 +18,24 @@ void AddFilesFromList( const std::string& list_name, TChain* chain );
 std::map<int, int> InitializeGeantNucleiCodesMap();
 
 int main(int n_args, char** args){
-  if( n_args < 2 )
-    throw std::runtime_error( "2 arguments expected, but only "+std::to_string( n_args )+" were provided" );
+  if( n_args < 2 ) {
+    std::cout << "Usage:" << std::endl;
+    std::cout << "./convert input [output] [start-event] [N-events]" << std::endl;
+    throw std::runtime_error("Minimum 2 arguments expected, but only " +
+                             std::to_string(n_args) + " were provided");
+  }
   std::string out_file_name{"out.root"};
+  int n_events=-1;
+  int start_event=0;
   if( n_args > 2 )
     out_file_name=args[2];
+  if( n_args > 3 )
+    n_events=atoi( args[3] );
+  if( n_args > 3 ) {
+    start_event = atoi(args[3]);
+    n_events = atoi(args[4]);
+  }
+
   auto chain = new TChain("events");
   AddFilesFromList(args[1], chain);
   UEvent *event = new UEvent;
@@ -30,9 +43,9 @@ int main(int n_args, char** args){
   chain->SetBranchAddress("event", &event);
   chain->SetBranchAddress("iniState", &initial_state);
   std::ofstream file_out{out_file_name};
-  auto n_events = chain->GetEntries();
+  n_events = n_events < 0 ? chain->GetEntries() : n_events;
   auto geant_numbers = InitializeGeantNucleiCodesMap();
-  for( int i=0; i<n_events; ++i ){
+  for( int i=start_event; i<n_events && i<chain->GetEntries(); ++i ){
     chain->GetEntry(i);
     auto evt_id =  event->GetEventNr();
     auto b = event->GetB();
