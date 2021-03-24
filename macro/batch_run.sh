@@ -23,20 +23,20 @@ do
   echo
 
   "echo executing $build_dir/convert $lists_dir/$filelist input.evt $start $((start+10000))"
-#  $build_dir/convert $lists_dir/$filelist input.evt $start $((start+10000))
-#
-#  cp $build_dir/../macro/template_config.dat config.dat
-#  echo $(pwd)/input.evt >> config.dat
-#  echo $(pwd)/geant_out.root >> config.dat
-#
-#  /cvmfs/hades.gsi.de/install/5.34.34/hgeant2-5.5/hgeant -c -f config.dat no no no
-#  mkdir dst
-#  ls geant_out*.root > geant_out.list
-#  while read line; do
-#    input_files=$input_files","$line
-#  done < geant_out.list
+  $build_dir/convert $lists_dir/$filelist input.evt $start $((start+10000))
+
+  cp $build_dir/../macro/config_ag158.dat config.dat
+  echo $(pwd)/input.evt >> config.dat
+  echo $(pwd)/geant_out.root >> config.dat
+
+  /cvmfs/hades.gsi.de/install/5.34.34/hgeant2-5.5/hgeant -c -f config.dat no no no
+  mkdir dst
+  ls geant_out*.root > geant_out.list
+  while read line; do
+    input_files=$input_files","$line
+  done < geant_out.list
   echo "executing /lustre/hebe/hades/user/fkornas/sub/apr12/OwnEvt/dst/analysisDST geant_out1.root dst/ 10000 1"
-  /lustre/hebe/hades/user/fkornas/sub/apr12/OwnEvt/dst/analysisDST geant_out1.root dst/ 10000 1
+  /lustre/hebe/hades/user/fkornas/sub/apr12/OwnEvt/dst/analysisDST geant_out1.root dst/ 10000
   cd ..
 done
 

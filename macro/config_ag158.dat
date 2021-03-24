@@ -1,0 +1,65 @@
+! GEANT key words
+!
+PMCF 1
+AUTO 1
+KINE 0
+FMAP 2
+FPOL 0.9235
+MXST 25000
+JVER 2 2 0
+BEAM 1. 1. 1580. 0. 0. 0.
+SECO 3 0
+CKOV 1
+LOSS 1
+DRAY 1
+SWIT 0 0 1 0 0 1 1 1
+ETA  37.30 30.20 21.00 4.75 6.0 7.1e-2
+TIME 0 1000000 1000000
+SPLIT 1800000000
+FILE 1
+END            ! End of gffread
+//
+// ******************************************************************
+//
+//
+// geometry for Ag+Ag simimulation
+//
+DbSupport:     OFF
+SimulRefRunId: 16000
+ParameterFile: /lustre/nyx/hades/user/morozovs/HADES_simulation/simul/emc_gpar.root
+
+//
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/media_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/cave_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/rich_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/target_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/sect_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/mdc_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/coils_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/tof_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/rpc_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/emc_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/start_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/frames_040220173529.geo
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/wall_040220173529.geo
+
+//
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/rich_040220173529.hit
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/mdc_040220173529.hit
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/tof_040220173529.hit
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/rpc_040220173529.hit
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/emc_040220173529.hit
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/start_040220173529.hit
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/wall_040220173529.hit
+
+//
+/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/files/fldrpz_unf.map
+//
+kine.tup
+emc.tup
+rich.tup
+rpc.tup
+mdc.tup
+tof.tup
+wall.tup
+//
