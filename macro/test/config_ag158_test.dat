@@ -27,34 +27,34 @@ END            ! End of gffread
 //
 DbSupport:     OFF
 SimulRefRunId: 16000
-ParameterFile: /lustre/nyx/hades/user/morozovs/HADES_simulation/simul/emc_gpar.root
+ParameterFile: /cvmfs/hades.gsi.de/param/hgeant/prop2017/emc_gpar_2_21042017.root
 
 //
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/media_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/cave_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/rich_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/target_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/sect_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/mdc_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/coils_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/tof_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/rpc_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/emc_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/start_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/frames_040220173529.geo
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/wall_040220173529.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/media.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/cave.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rich.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/target.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/sect.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/mdc.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/coils.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/tof.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rpc.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/emc.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/start.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/frames.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/wall.geo
 
 //
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/rich_040220173529.hit
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/mdc_040220173529.hit
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/tof_040220173529.hit
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/rpc_040220173529.hit
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/emc_040220173529.hit
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/start_040220173529.hit
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/wall_040220173529.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rich.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/mdc.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/tof.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rpc.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/emc.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/start.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/wall.hit
 
 //
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/files/fldrpz_unf.map
+/cvmfs/hades.gsi.de/param/field/fldrpz_unf.map
 //
 kine.tup
 emc.tup
