@@ -49,7 +49,7 @@ int main(int n_args, char** args){
     chain->GetEntry(i);
     auto evt_id =  event->GetEventNr();
     auto b = event->GetB();
-    auto Ebeam = 1.23;
+    auto Ebeam = 1.58;
     auto n_particles = event->GetNpa();
     int n_part=0;
     for( int j=0; j<n_particles; ++j ) {
