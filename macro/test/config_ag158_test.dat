@@ -4,11 +4,11 @@ PMCF 1
 AUTO 1
 KINE 0
 FMAP 2
-FPOL 0.7215
+FPOL 0.9235
 MXST 25000
 JVER 2 2 0
-BEAM 1. 1. 1230. 0. 0. 0.
-SECO 3 0
+BEAM 1. 1. 1580. 0. 0. 0.
+SECO 3 1
 CKOV 1
 LOSS 1
 DRAY 1
@@ -26,43 +26,39 @@ END            ! End of gffread
 // geometry for Ag+Ag simimulation
 //
 DbSupport:     OFF
-SimulRefRunId: 16000
+SimulRefRunId: 0
 ParameterFile: /cvmfs/hades.gsi.de/param/hgeant/prop2017/emc_gpar_2_21042017.root
-
 //
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/media.geo
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/cave.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rich.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/target.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/sect.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/mdc.geo
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/coils.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/tof.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rpc.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/emc.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/start.geo
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/frames.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/mdc.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/media.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rich.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rpc.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/sect.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/emc.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/target.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/tof.geo
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/wall.geo
-
 //
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rich.hit
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/mdc.hit
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/tof.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rich.hit
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rpc.hit
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/emc.hit
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/start.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/tof.hit
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/wall.hit
 
 //
 /cvmfs/hades.gsi.de/param/field/fldrpz_unf.map
 //
 kine.tup
-emc.tup
 rich.tup
-rpc.tup
 mdc.tup
 tof.tup
+emc.tup
 wall.tup
+rpc.tup
 //
 
 /lustre/nyx/hades/user/mmamaev/botvina2hgeant/build/ag158.evt
