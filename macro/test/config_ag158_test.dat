@@ -12,7 +12,6 @@ SECO 3 0
 CKOV 1
 LOSS 1
 DRAY 1
-TRIG 1000
 SWIT 0 0 1 0 0 1 1 1
 ETA  37.30 30.20 21.00 4.75 6.0 7.1e-2
 TIME 0 1000000 1000000
@@ -29,25 +28,25 @@ DbSupport:     OFF
 SimulRefRunId: 0
 ParameterFile: /cvmfs/hades.gsi.de/param/hgeant/prop2017/emc_gpar_2_21042017.root
 //
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/cave.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/coils.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/frames.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/mdc.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/media.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rich.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rpc.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/sect.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/emc.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/target.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/tof.geo
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/wall.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/cave.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/coils.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/frames.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/mdc.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/media.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/rich.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/rpc.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/sect.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/emc.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/target.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/tof.geo
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/wall.geo
 //
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/mdc.hit
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rich.hit
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/rpc.hit
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/emc.hit
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/tof.hit
-/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/wall.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/mdc.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/rich.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/rpc.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/emc.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/tof.hit
+/lustre/nyx/hades/user/mmamaev/hgeant_agag/geom_test/wall.hit
 
 //
 /cvmfs/hades.gsi.de/param/field/fldrpz_unf.map
