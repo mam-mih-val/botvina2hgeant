@@ -62,6 +62,7 @@ tof.tup
 emc.tup
 wall.tup
 rpc.tup
+start.tup
 //
 
 /lustre/nyx/hades/user/mmamaev/botvina2hgeant/build/ag158.evt
