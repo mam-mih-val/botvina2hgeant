@@ -52,7 +52,7 @@ ParameterFile: /cvmfs/hades.gsi.de/param/hgeant/prop2017/emc_gpar_2_21042017.roo
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/wall.hit
 
 //
-/lustre/nyx/hades/user/morozovs/HADES_simulation/simul/files/fldrpz_unf.map
+/cvmfs/hades.gsi.de/param/field/fldrpz_unf.map
 //
 kine.tup
 emc.tup
