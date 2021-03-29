@@ -26,7 +26,7 @@ END            ! End of gffread
 //
 DbSupport:     OFF
 SimulRefRunId: 0
-ParameterFile: /cvmfs/hades.gsi.de/param/hgeant/prop2017/emc_gpar_2_21042017.root
+ParameterFile: /lustre/nyx/hades/user/morozovs/HADES_simulation/simul/emc_gpar.root
 //
 /lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/media_040220173529.geo
 /lustre/nyx/hades/user/morozovs/HADES_simulation/simul/geom16000/cave_040220173529.geo
@@ -62,7 +62,6 @@ tof.tup
 emc.tup
 wall.tup
 rpc.tup
-start.tup
 //
 
 /lustre/nyx/hades/user/mmamaev/botvina2hgeant/build/ag158.evt
