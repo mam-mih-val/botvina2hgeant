@@ -25,9 +25,8 @@ END            ! End of gffread
 // geometry for Ag+Ag simimulation
 //
 DbSupport:     OFF
-SimulRefRunId: 16000
+SimulRefRunId: 0
 ParameterFile: /cvmfs/hades.gsi.de/param/hgeant/prop2017/emc_gpar_2_21042017.root
-
 //
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/cave.geo
 /lustre/nyx/hades/user/mmamaev/hgeant_agag/geom/coils.geo
