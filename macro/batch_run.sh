@@ -15,8 +15,8 @@ cd $job_num
 echo "loading " $hadesroot
 source $hadesroot
 
-#for start in 0 10000 20000 30000 40000
-for start in 0
+for start in 0 10000 20000 30000 40000
+#for start in 0
 do
   mkdir $start
   cd $start
