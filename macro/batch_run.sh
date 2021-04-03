@@ -20,11 +20,10 @@ for start in 0 10000 20000 30000 40000
 do
   mkdir $start
   cd $start
-  echo goto $start
-  echo
+  echo "goto $start"
   echo "loading /cvmfs/hades.gsi.de/install/6.12.06/hydra2-5.5a/defall.sh"
   . /cvmfs/hades.gsi.de/install/6.12.06/hydra2-5.5a/defall.sh
-  "echo executing $build_dir/convert $lists_dir/$filelist input.evt $start $((start+10000))"
+  echo "executing $build_dir/convert $lists_dir/$filelist input.evt $start $((start+10000))"
   $build_dir/convert $lists_dir/$filelist input.evt $start $((start+10000))
 
   echo "loading /cvmfs/hades.gsi.de/install/5.34.34/hydra2-5.5a/defall.sh"
