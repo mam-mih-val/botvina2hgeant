@@ -15,8 +15,8 @@ cd $job_num
 echo "loading " $hadesroot
 source $hadesroot
 
-for start in 0 10000 20000 30000 40000
-#for start in 0
+#for start in 0 10000 20000 30000 40000
+for start in 0
 do
   mkdir $start
   cd $start
@@ -28,7 +28,7 @@ do
 
   echo "loading /cvmfs/hades.gsi.de/install/5.34.34/hydra2-5.5a/defall.sh"
   . /cvmfs/hades.gsi.de/install/5.34.34/hydra2-5.5a/defall.sh
-  cp $build_dir/../macro/config_ag158.dat config.dat
+  cp $build_dir/../macro/config_ag123.dat config.dat
   echo $(pwd)/input.evt >> config.dat
   echo $(pwd)/geant_out.root >> config.dat
 
